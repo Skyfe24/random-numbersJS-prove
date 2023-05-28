@@ -9,6 +9,6 @@ const max= 5;
 
 // così non supererà mai il 5 /
 let result = Math.floor(random * max);
-console.log ('result:' result);
+console.log ('result:' + result);
 
 //aggiungiamo Math.floor prima della parentesi per ELIMINARE LA PARTE DECIMALE
