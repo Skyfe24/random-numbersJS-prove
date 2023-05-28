@@ -14,9 +14,15 @@ let result = Math.floor(random * max);
 //aggiungiamo Math.floor prima della parentesi per ELIMINARE LA PARTE DECIMALE
 
 // 2) proviamo con una variabile massima ad esempio 5 //
- result = Math.floor(random * max)+ 1; //aggiungiamo + 1 così andrà ad escludere 1 unità in più in questo caso 6//
+ result = Math.floor(random * (max+ 1)); //aggiungiamo + 1 così andrà ad escludere 1 unità in più in questo caso 6//
 //console.log ('result:' + result);//
 
-// 2) proviamo con una variabile massima ad esempio 5 ma vogliamo partire MINIMO DA 1 //
-result = Math.floor(random * max) + 1; //aggiungiamo + 1 così andrà ad escludere 1 unità in più in questo caso 6//
+// 3) proviamo con una variabile massima ad esempio 5 ma vogliamo partire MINIMO DA 1 //
+result = Math.floor(random * max) + 1; //aggiungiamo + 1 ma dopo così come minimo uscirà sempre 1//
+//console.log ('result:' + result);//
+
+// 4) proviamo con una variabile massima ad esempio 5 
+//ma vogliamo partire MINIMO DA 1 ed ESCLUDERE IL MASSIMO (5) //
+
+result = Math.floor(random * (max - 1)) + 1; //aggiungiamo + 1 ma fuori così non può uscire - di 1 ma diamo -1 al max così che non possa mai uscire 6//
 console.log ('result:' + result);
