@@ -5,7 +5,8 @@ console.log('random number:' + random);
 
 // 1) proviamo con una variabile massima ad esempio 5 MA NON VOGLIAMO ESCA 5//
 
-const max= 5;
+const min= 2;
+const max= 7;
 
 // così non supererà mai il 5 /
 let result = Math.floor(random * max);
@@ -25,4 +26,13 @@ result = Math.floor(random * max) + 1; //aggiungiamo + 1 ma dopo così come mini
 //ma vogliamo partire MINIMO DA 1 ed ESCLUDERE IL MASSIMO (5) //
 
 result = Math.floor(random * (max - 1)) + 1; //aggiungiamo + 1 ma fuori così non può uscire - di 1 ma diamo -1 al max così che non possa mai uscire 6//
+//console.log ('result:' + result);
+
+// 5) proviamo a generare un numero casuale da MIN a MAX escludendo il MAX
+
+result = Math.floor(random * (max - min)) + min; //col + min ci assicuriamo che il minimo esca, sottraendolo prima al max evitiamo di sforare tanto lo abbiamo già alzato per il minimo//
 console.log ('result:' + result);
+
+
+
+// 6) proviamo a generare un numero casuale da MIN a MAX includendo il MAX
